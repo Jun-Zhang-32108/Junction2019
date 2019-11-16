@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 
 
 import com.google.ar.sceneform.samples.hellosceneform.R;
@@ -36,16 +37,18 @@ public class HomeFragment extends Fragment {
 //        });
 //        return root;
         View v=inflater.inflate(R.layout.fragment_home, container, false);
-        WebView mWebView = (WebView) v.findViewById(R.id.webview);
 
-        mWebView.loadUrl("https://www-app.herokuapp.com/temp");
-
-        // Enable Javascript
-        WebSettings webSettings = mWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-
-        // Force links and redirects to open in the WebView instead of in a browser
-        mWebView.setWebViewClient(new WebViewClient());
+        ImageView imageView = (ImageView) v.findViewById(R.id.store_image);
+//        WebView mWebView = (WebView) v.findViewById(R.id.webview);
+//
+//        mWebView.loadUrl("https://www-app.herokuapp.com/temp");
+//
+//        // Enable Javascript
+//        WebSettings webSettings = mWebView.getSettings();
+//        webSettings.setJavaScriptEnabled(true);
+//
+//        // Force links and redirects to open in the WebView instead of in a browser
+//        mWebView.setWebViewClient(new WebViewClient());
 
         return v;
     }

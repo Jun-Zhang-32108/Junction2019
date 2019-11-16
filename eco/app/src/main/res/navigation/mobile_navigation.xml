@@ -22,4 +22,16 @@
         android:name="aalto.junction.eco.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="aalto.junction.eco.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_ar"
+        android:name="aalto.junction.eco.ui.ar.CustomArFragment"
+        android:label="@string/title_ar"
+        tools:layout="@layout/fragment_ar" />
 </navigation>

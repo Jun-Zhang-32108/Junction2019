@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +29,18 @@ public class DashboardFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         //final TextView textView = root.findViewById(R.id.text_dashboard);
 
-        ImageView imageView = (ImageView) root.findViewById(R.id.online_image);
+
+
+        WebView mWebView = (WebView) root.findViewById(R.id.webview);
+
+        mWebView.loadUrl("https://www-app.herokuapp.com/temp");
+
+        // Enable Javascript
+        WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        // Force links and redirects to open in the WebView instead of in a browser
+        mWebView.setWebViewClient(new WebViewClient());
 
 //        dashboardViewModel.getText().observe(this, new Observer<String>() {
 //            @Override
