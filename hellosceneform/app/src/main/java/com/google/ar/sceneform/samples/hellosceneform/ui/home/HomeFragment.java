@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
         View v=inflater.inflate(R.layout.fragment_home, container, false);
         WebView mWebView = (WebView) v.findViewById(R.id.webview);
 
-        mWebView.loadUrl("file:///android_asset/build/index.html");
+        mWebView.loadUrl("https://www-app.herokuapp.com/temp");
 
         // Enable Javascript
         WebSettings webSettings = mWebView.getSettings();
